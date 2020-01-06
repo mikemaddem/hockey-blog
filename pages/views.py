@@ -10,7 +10,7 @@ def index(request):
 
     newslist = Post.objects.all().order_by('-id')[:3]
 
-    return render(request, 'pages/' + request.tenant + '/index.html',
+    return render(request, 'pages/index.html',
                   {'staticinfo': staticinfo,'newslist': newslist,})
 
 
